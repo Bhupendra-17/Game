@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="shortcut icon" href="/src/images.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="memory.css">
+</head>
+
+<body>
+    <div id="bigcont">
+        <div id="container">
+            <h1>Memory Game</h1>
+            <div id="home">
+                <a href="/home.html"><i id="homeicon" class="fa-solid fa-house "></i> </a>
+            </div>
+            
+            <div class="controls">
+                <button id="play">Play</button>
+                <button id="pause">Pause</button>
+                <button id="resume">Resume</button>
+                <button id="reset">Reset</button>
+            </div>
+            <div id="subc">
+                <div class="timer">Time: <span id="time">60</span>s</div>
+                <div class="score">Score: <span id="score">0</span></div>
+            </div>
+            <div class="game-board" id="gameBoard"></div>
+            <script src="memory.js"></script>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    /* Light blue background for the whole page */
+}
+
+#container {
+    position: relative;
+    padding: 10px;
+    padding-top: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: linear-gradient( rgb(3, 72, 99), rgb(237, 223, 163));  /* White background for the container */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a card-like effect */
+    overflow: auto;
+}
+
+h1 {
+    color: white; 
+    font-size: 2.5rem;
+    margin-top: 3px;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+button {
+    margin: 0 8px;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 50px; /* Rounded button shape */
+    border: none;
+    background-color: #1e88e5; /* Initial blue button color */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Apply transition to background-color, color, and transform */
+}
+
+button:hover {
+    background-color: #000000; /* Black background on hover */
+    color: #ffffff; /* White text color on hover */
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+
+.timer,#lifelines,
+.score {
+    background-color: white;
+    padding: 7px 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: black; /* Medium blue for timer and score */
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 10px;
+    margin-top: 10px;
+}
+#subc{
+    display: flex;
+    gap: 15px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #81d4fa; /* Light blue background for cards */
+    border: 2px solid #29b6f6; /* Bright blue border for cards */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #ffffff; /* White text color */
+    cursor: pointer;
+    border-radius: 8px; /* Slightly rounded corners */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.card.flipped {
+    background-color: #0288d1; /* Darker blue for flipped cards */
+}
+
+.card:hover {
+    background-color: #295367; /* Very light blue on hover */
+    transform: scale(1.05);
+}
+#home{
+    position: absolute;
+    left: 5vh;
+    font-size: x-large;
+    top: 15px;
+}
+#homeicon{
+    color: aliceblue;
+}
+#homeicon:hover{
+    color: rgb(249, 252, 79);
+}

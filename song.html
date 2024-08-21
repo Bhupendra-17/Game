@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Song</title>
+    <link rel="shortcut icon" href="/src/images.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/game.css">
+    <style>
+        button {
+            font-size: large;
+            font-weight: 500;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #scoreSection {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        #score {
+            font-size: 2em;
+        }
+        
+        #resultMessage {
+            text-align: center;
+            font-size: 1.5em;
+            margin-top: 1em;
+            color: green;
+        }
+
+    </style>
+</head>
+
+<body class="bg-gradient-to-r from-orange-400 to-pink-200 min-h-screen flex flex-col mb-12">
+    <nav class="flex justify-center px-5 bg-white py-2 mb-5 shadow-lg">
+        <a href="/home.html"><i
+                class="fa-solid fa-house absolute left-5 p-2 text-2xl hover:text-blue-500 cursor-pointer "></i></a>
+        <h1 class="text-3xl pt-1">Guess the Song</h1>
+    </nav>
+    <div id="scoreSection" class="absolute top-5 right-5 bg-white p-4 rounded-lg shadow-lg">
+        <h2 class="text-xl font-bold">Score</h2>
+        <p id="score" class="text-3xl font-semibold">00</p>
+    </div>
+
+    <div id="bgimg"
+        class="flex justify-center w-56 h-52 bg-white rounded-full self-center my-4 transition transform hover:scale-105 duration-300">
+        <img src="/src/music.jpg" class="self-center rounded-full w-52 h-48 my-6">
+    </div>
+    <button id="playButton"
+        class="self-center w-fit bg-pink-600 text-white p-2 hover:bg-white hover:text-black rounded-full">Play
+        Song</button>
+    <div class="flex justify-center gap-4 my-2">
+        <input type="text" id="guessInput" placeholder="Enter your guess here"
+            class="py-2 px-4 rounded-full border border-gray-300" autocomplete="off">
+        <button id="submitGuessButton"
+            class="bg-green-600 text-white px-2 hover:bg-white hover:text-black rounded-full">Submit</button>
+    </div>
+
+    <div id="resultMessage" class="hidden"></div> <!-- Added resultMessage element here -->
+    
+    <div class="flex justify-center mt-4 text-2xl">
+        <button id="showAnswerButton"
+            class="bg-blue-600 text-white p-2 hover:bg-white hover:text-black rounded-full w-auto">Show Answer</button>
+        <p id="answer" class="text-center rounded-full p-2 w-2/5 bg-white hidden">The song is: <span
+                id="songTitle"></span></p>
+    </div>
+
+
+    <div id="finalScore"
+        class="hidden absolute text-5xl font-semibold align-middle items-center m-auto bg-sky-700 rounded-3xl p-5 shadow-xl shadow-cyan-600">
+        <div class="flex flex-col justify-center rounded-3xl shadow-lg shadow-emerald-500 text-center p-10 bg-white">
+            <h1>Game Over!</h1>
+            <h1 class="text-slate-600 text-3xl">Your Score</h1>
+            <h1 id="fscore" class="font-bold text-stone-700 text-8xl">00</h1>
+            <button id="replay"
+                class="text-xl font-semibold mt-2 px-2 py-2 bg-gradient-to-r from-yellow-500 to-purple-400 rounded-lg">Replay</button>
+        </div>
+    </div>
+    <script src="/src/SongGame/app.js"></script>
+</body>
+</html>

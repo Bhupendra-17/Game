@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed Sum</title>
+    <link rel="shortcut icon" href="/src/images.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/game.css">
+</head>
+<style>
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+</style>
+<body class="bg-gradient-to-r from-red-400 to-yellow-400 overflow-hidden">
+    <a href="/home.html"><i class="fa-solid fa-house absolute left-3 top-2 p-2 text-3xl text-white hover:text-blue-500 cursor-pointer "></i> </a> 
+    <div class="flex justify-center top-0 items-center h-screen">
+        <div id="container" style="background-image: url(/src/bg.jpg);"
+            class="bg-center bg-no-repeat sticky flex justify-around h-full  w-5/6 ">
+            
+            <div id="movingCont"
+                class="relative w-100 h-24 rounded-full bg-stone-100 transition text-center items-center animate-motion">
+                <div class="flex items-center text-5xl font-semibold justify-center pt-3">
+                    <h1 id="num1">12</h1>
+                    <h1>+</h1>
+                    <h1 id="num2">61</h1>
+                    <h1>=</h1>
+                    <div class="">
+                        <input type="number" id="myNum"
+                            class="w-20 text-5xl relative top-0 bg-transparent outline-none ">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute top-5 right-10 items-center h-40 w-40 bg-white shadow-md shadow-cyan-500 rounded-3xl
+               transition transform hover:scale-95 duration-300">
+            <h1 class="text-5xl py-2 font-bold text-center pt-2 text-pink-500">
+                Score
+            </h1>
+            <h1 id="score" class="text-6xl text-center font-semibold ">00</h1>
+        </div>
+        
+        <div id="finalScore"
+            class="hidden absolute text-5xl font-semibold align-middle items-center m-auto bg-sky-700 rounded-3xl p-5 shadow-xl shadow-cyan-600">
+            <div
+                class="flex flex-col justify-center rounded-3xl text-center p-10 bg-white">
+                <h1>Game Over!</h1>
+                <h1 class="text-slate-600 text-3xl">Your Score</h1>
+                <h1 id="fscore" class="font-bold text-stone-700 text-8xl">00</h1>
+                <button id="replay"
+                    class="text-xl font-semibold mt-2 px-2 py-2 bg-gradient-to-r from-yellow-500 to-purple-400 rounded-lg">Replay</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/src/SumGame/game.js"></script>
+</body>
+</html>

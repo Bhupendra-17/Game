@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcade Fusion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/src/images.png" type="image/x-icon">
+    <link rel="stylesheet" href="./game.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-white" id="#top">
+    <section style="overflow: hidden;">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </section>
+    <div class="bg-sky-950 min-h-screen overflow-x-hidden pb-10">
+        <!-- Sticky Navbar -->
+        <div class="sticky z-50 top-0 bg-white">
+            <div class="flex justify-center px-8 w-screen shadow-lg pb-5">
+                <h1 class="text-3xl font-bold py-5 font-mono">Arcade Fusion</h1>
+                <div class="absolute bg-transparent right-0 top-16 animate-move-r-l w-full">
+                    <img src="/src/car.jpg" class="w-20" alt="Car Image" />
+                </div>
+            </div>
+        </div>
+        <!-- Header -->
+        <div class="flex flex-col gap-5 pt-5 items-center text-white justify-center animate-pulse">
+            <div class="text-3xl font-semibold text-center">
+                <h1>Challenge Your Brain with Fun and Intersting games</h1>
+            </div>
+            <div class="text-2xl font-mono text-center">
+                <h1>Choose your game here...</h1>
+            </div>
+        </div>
+
+        <!-- Game Cards -->
+        <div class="flex justify-center mt-12">
+            <div class="mx-1 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-7 justify-center">
+                <a class="bg-stone-50 border-2 border-gray-500 rounded-xl w-52  transition transform hover:scale-105 duration-300 shadow-md shadow-white"
+                    href="./game.html">
+                    <img src="/src/s.png" class="rounded-t-xl h-36 w-full p-0.5" alt="Speed-Sum Game" />
+                    <h2 class="text-left text-xl font-semibold px-2">Speed Sum</h2>
+                    <p class="line-clamp-2 py-1 text-justify px-2">Boost your calculation...</p>
+                </a>
+
+                <a class="bg-stone-50 border-2 border-gray-500 rounded-xl w-52  transition transform hover:scale-105 duration-300 shadow-md shadow-white"
+                    href="/src/memory/memory.html">
+                    <img src="/src/s_mem.png" class="rounded-t-xl h-36 w-full p-0.5" alt="ABC Game" />
+                    <h2 class="text-left text-xl font-semibold px-2">Memory Game</h2>
+                    <p class="line-clamp-2 py-1 text-justify  px-2">Play with cards...</p>
+                </a>
+
+                <a class="bg-stone-50 border-2 border-gray-500 rounded-xl w-52  transition transform hover:scale-105 duration-300 shadow-md shadow-white"
+                    href="/song.html">
+                    <img src="/src/song.png" class="rounded-t-xl h-36 w-full p-0.5" alt="Guess the song Game" />
+                    <h2 class="text-left text-xl font-semibold px-2">Guess the song</h2>
+                    <p class="line-clamp-2 py-1 text-justify px-2">Listen carefully...</p>
+                </a>
+
+                <a class="bg-stone-50 self-center border-2 border-gray-500 rounded-xl w-52  transition transform hover:scale-105 duration-300 shadow-md shadow-white"
+                    href="/src/tictactoe/tictactoe.html">
+                    <img src="/src/tictac.png" class="rounded-t-xl h-36 w-full p-0.5" alt="Tic Tac Toe Game" />
+                    <h2 class="text-left text-xl font-semibold px-2">Tic Tac Toe</h2>
+                    <p class="line-clamp-2 py-1 text-justify px-2">Two player game...</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <footer class="h-16 bg-stone-800 mt-1 px-5">
+        <p class="pt-5 text-white">
+            <a href="#top"><i class="fa-solid fa-circle-chevron-up px-2"></i>Back to top</a> 
+            
+        </p>
+    </footer>
+</body>
+
+</html>
